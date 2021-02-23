@@ -53,7 +53,7 @@ public class SearchCommand extends ClueCommand {
     out.println("parsed query: "+q);
     
     long start = System.currentTimeMillis();
-    TopDocs td = searcher.search(q, 10);
+    TopDocs td = searcher.search(q, Integer.MAX_VALUE);
     long end = System.currentTimeMillis();
     
     out.println("numhits: " + td.totalHits);
